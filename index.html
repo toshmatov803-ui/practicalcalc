@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PracticalCalc</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  text-align: center;
+  padding: 30px 15px;
+}
+.container {
+  max-width: 420px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+}
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px;
+}
+button {
+  padding: 12px 25px;
+  background: #087fdb;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>PracticalCalc</h1>
+<p>Бесплатные практические калькуляторы</p>
+<h3>Калькулятор процентов</h3>
+<input id="amount" type="number" placeholder="Введите сумму">
+<input id="percent" type="number" placeholder="Введите процент">
+<button onclick="calculate()">Рассчитать</button>
+<h3 id="result"></h3>
+</div>
+<script>
+function calculate() {
+ const a = Number(document.getElementById('amount').value);
+ const p = Number(document.getElementById('percent').value);
+ document.getElementById('result').innerText =
+ 'Результат: ' + (a*p/100).toFixed(2);
+}
+</script>
+</body>
+</html>
